@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+    <meta property="og:site_name" content="502 Server Error" />
+    <meta property="og:title" content="Site Offline" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary">
+    <script>
+        var brand = /(^|\.)projectphil\.co\.uk$/.test(location.hostname) ? 'pp' : 'rd';
+        document.write('<link rel="stylesheet" href="/assets/502_' + brand + '.css"><link rel="icon" href="/assets/logo_' + brand + '.png">');
+    </script>
+    <noscript><link rel="stylesheet" href="/assets/502_rd.css"></noscript>
+	<title>502 - Currently Offline</title>
+</head>
+<body>
+	<div class="container">
+		<img class="logo" alt="Logo">
+		<script>document.querySelector('.logo').src = '/assets/logo_' + brand + '.png';</script>
+		<h1>OFFLINE</h1>
+		<p><span>502 Error</span></p>
+		<p>
+			Our site is currently offline. We should be back online shortly!
+			<br><br>
+			<span>If you're the site administrator, consider restarting the server.<br>Reach out to <a id="help" href="https://discord.gg/mdGZb2se2a" target="_blank">RAB Development</a> for help.</span>
+			<script>if (brand === 'pp') { var h = document.getElementById('help'); h.href = 'https://discord.gg/JeR7jKZJn2'; h.textContent = 'Project Phil'; }</script>
+		</p>
+	</div>
+</body>
+</html>
