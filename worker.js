@@ -1,5 +1,5 @@
 // Raw URL of the error page on GitHub (use the self-contained cloudflare.html).
-const PAGE_URL = "https://raw.githubusercontent.com/USER/REPO/main/cloudflare.html";
+const PAGE_URL = "https://raw.githubusercontent.com/RAB-Media/502-Error/refs/heads/main/cloudflare.html"
 
 async function errorPage() {
   let html = "<h1>502 - Site Offline</h1>";
