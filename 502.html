@@ -8,7 +8,7 @@
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary">
     <script>
-        var brand = /(^|\.)projectphil\.co\.uk$/.test(location.hostname) ? 'pp' : 'rd';
+        var brand = /(^|\.)projectphil\.co\.uk$/.test(location.hostname) ? 'pp' : /(^|\.)syntaxlabs\.co\.uk$/.test(location.hostname) ? 'sl' : 'rd';
         document.write('<link rel="stylesheet" href="/assets/502_' + brand + '.css"><link rel="icon" href="/assets/logo_' + brand + '.png">');
     </script>
     <noscript><link rel="stylesheet" href="/assets/502_rd.css"></noscript>
@@ -24,7 +24,8 @@
 			Our site is currently offline. We should be back online shortly!
 			<br><br>
 			<span>If you're the site administrator, consider restarting the server.<br>Reach out to <a id="help" href="https://discord.gg/mdGZb2se2a" target="_blank">RAB Development</a> for help.</span>
-			<script>if (brand === 'pp') { var h = document.getElementById('help'); h.href = 'https://discord.gg/JeR7jKZJn2'; h.textContent = 'Project Phil'; }</script>
+			<script>if (brand === 'pp') { var h = document.getElementById('help'); h.href = 'https://discord.gg/JeR7jKZJn2'; h.textContent = 'Project Phil'; }
+			if (brand === 'sl') { var h = document.getElementById('help'); h.href = 'https://discord.gg/bVaaVMk9Th'; h.textContent = 'Syntax Labs'; }</script>
 		</p>
 	</div>
 </body>
