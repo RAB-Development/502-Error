@@ -17,8 +17,11 @@ export default {
     try {
       response = await fetch(request);
     } catch (err) {
+      // Tunnel or origin completely unreachable (connection refused, DNS failure, etc.)
       return errorPage();
     }
-    return response.status === 502 ? errorPage() : response;
+    // Show the error page for any 5xx server error:
+    // 500, 502, 503, 504 (origin errors) and 521-524, 530 (Cloudflare origin-down errors)
+    return response.status >= 500 ? errorPage() : response;
   },
 };
